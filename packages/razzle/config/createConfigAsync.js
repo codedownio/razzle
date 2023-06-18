@@ -491,6 +491,9 @@ module.exports = (
           },
           additionalAliases
         ),
+        fallback: {
+          "url": false, // So razzle-dev-utils can use url
+        },
         plugins: [
           webpackMajor !== 5 && PnpWebpackPlugin,
         ].filter(x => x),
