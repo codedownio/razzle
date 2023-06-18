@@ -26,7 +26,8 @@ describe('razzle build', () => {
 
   it('should compile files into a build directory', () => {
     util.setupStageWithFixture(stageName, 'build-default');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
+
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -55,7 +56,7 @@ describe('razzle build', () => {
 
   it('should compile files with a custom .babelrc', () => {
     util.setupStageWithFixture(stageName, 'build-with-babelrc');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -84,7 +85,7 @@ describe('razzle build', () => {
 
   it('should compile files with a custom razzle.config.js', () => {
     util.setupStageWithFixture(stageName, 'build-with-custom-config');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -110,7 +111,7 @@ describe('razzle build', () => {
 
   it('should compile files with a plugin in razzle.config.js', () => {
     util.setupStageWithExample(stageName, 'with-scss');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -128,7 +129,7 @@ describe('razzle build', () => {
 
   it('should compile files in spa mode', () => {
     util.setupStageWithFixture(stageName, 'build-default-spa');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -160,7 +161,7 @@ describe('razzle build', () => {
 
   it('should compile with plugin options', () => {
     const stagePath = util.setupStageWithExample(stageName, 'with-scss-options');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -174,7 +175,7 @@ describe('razzle build', () => {
 
   it('should compile with promise config', () => {
     const stagePath = util.setupStageWithExample(stageName, 'with-promise-config');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -187,7 +188,7 @@ describe('razzle build', () => {
 
   it('should compile with jsconfig paths', () => {
     const stagePath = util.setupStageWithExample(stageName, 'with-jsconfig-paths');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -201,7 +202,7 @@ describe('razzle build', () => {
 
   it('should exit with an error code when the custom config is invalid', () => {
     util.setupStageWithFixture(stageName, 'build-with-custom-config-invalid');
-    const output = shell.exec('yarn build', {
+    const output = shell.exec('npm run build', {
       silent: true,
     });
 
@@ -211,7 +212,7 @@ describe('razzle build', () => {
 
   it('should compile with development build', () => {
     const stagePath = util.setupStageWithExample(stageName, 'with-development-build');
-    const output = shell.exec('yarn build --noninteractive');
+    const output = shell.exec('npm run build -- --noninteractive');
     // Create asset manifest
     expect(fileExists('build/assets.json')).toBeTruthy();
 
@@ -223,7 +224,7 @@ describe('razzle build', () => {
 
   it('should exit with an error code when the custom config is invalid', () => {
     util.setupStageWithFixture(stageName, 'build-with-custom-config-invalid');
-    const output = shell.exec('yarn build', {
+    const output = shell.exec('npm run build', {
       silent: true,
     });
 
