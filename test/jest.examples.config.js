@@ -10,7 +10,8 @@ module.exports = {
     "default",
     ["jest-html-reporters", {
       pageTitle: `${testType} examples tests report.html`,
-      filename: `test-artifacts/${testType}-examples-report.html`,
+      filename: `${testType}-examples-report.html`,
+      publicPath: "./test-artifacts",
     }]
   ]
 };
