@@ -21,6 +21,6 @@
   "peerDependencies": {
     "razzle": "4.2.18",
     "razzle-dev-utils": "4.2.18",
-    "webpack": "~4||~5"
+    "webpack": "~5"
   }
 }

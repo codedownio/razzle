@@ -30,6 +30,6 @@
     "razzle": "4.2.18",
     "razzle-dev-utils": "4.2.18",
     "style-loader": "^2.0.0",
-    "webpack": "~4||~5"
+    "webpack": "~5"
   }
 }

@@ -23,7 +23,7 @@
     "razzle": "4.2.15",
     "razzle-dev-utils": "4.2.15",
     "razzle-plugin-scss": "4.2.15",
-    "webpack": "^4.44.1",
+    "webpack": "^5.87.0",
     "postcss": "^8.2.4",
     "webpack-dev-server": "^4.15.1"
   }
