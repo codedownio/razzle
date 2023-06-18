@@ -509,7 +509,7 @@ module.exports = (
             exclude: webpackOptions.fileLoaderExclude,
             use: clientOnly || webpackOptions.enableHtmlWebpackPlugin ? (info) => {
               return info.compiler !== 'HtmlWebpackCompiler' ? [{
-                loader: require.resolve('file-loader'),
+                loader: 'file-loader',
                 options: {
                   name: webpackOptions.fileLoaderOutputName,
                   emitFile: IS_WEB,
@@ -517,7 +517,7 @@ module.exports = (
                 ident: 'razzle-file-loader'
               }]:[]} :
               [{ // fix for vue-loader plugin
-                loader: require.resolve('file-loader'),
+                loader: 'file-loader',
                 options: {
                   name: webpackOptions.fileLoaderOutputName,
                   emitFile: IS_WEB,
