@@ -530,16 +530,12 @@ module.exports = (
           // A missing `test` is equivalent to a match.
           {
             test: webpackOptions.urlLoaderTest,
-            use: [{
-              loader: require.resolve('url-loader'),
-              options: {
-                limit: 10000,
-                name: webpackOptions.urlLoaderOutputName,
-                emitFile: IS_WEB,
-              },
-              ident: 'razzle-url-loader'
-            }
-          ]},
+            type: 'asset/resource',
+            generator: {
+              emit: IS_WEB,
+              outputPath: webpackOptions.urlLoaderOutputName,
+            },
+          },
 
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
