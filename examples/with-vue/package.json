@@ -22,8 +22,8 @@
     "razzle": "4.2.15",
     "razzle-dev-utils": "4.2.15",
     "razzle-plugin-vue": "4.2.15",
-    "html-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^5.5.3",
     "webpack": "^4.44.1",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.15.1"
   }
 }

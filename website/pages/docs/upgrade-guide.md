@@ -27,7 +27,7 @@ Choose your webpack version
 ```bash
 yarn add --dev webpack@5.24.0 html-webpack-plugin@5.2.0
 # or
-yarn add --dev webpack@4.46.0 html-webpack-plugin@4.5.2
+yarn add --dev webpack@4.46.0 html-webpack-plugin@5.5.3
 ```
 
 Update/add razzle plugins if you use any
