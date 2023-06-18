@@ -47,7 +47,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "test": "yarn test:e2e",
+    "test": "npm run test:e2e",
     "test:packages": "lerna run test --stream --scope razzle-* --ignore razzle-examples-* -- --passWithNoTests --verbose --no-cache",
     "test:e2e": "jest --config ./test/jest.e2e.config.json --verbose --no-cache",
     "test:examples": "jest --config ./test/jest.examples.config.js --verbose --no-cache",
@@ -56,10 +56,10 @@
     "clean": "lerna clean --yes",
     "format": "prettier --write 'packages/*/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx)' 'packages/*/!(node_modules)/**/*.js'",
     "publish-all": "node ./scripts/publish-all.js",
-    "publish-all-stable": "yarn publish-all -c -t --push && release && node ./scripts/release-notes.js",
-    "publish-all-canary": "yarn publish-all -p canary -c -t --push && release --pre",
-    "publish-all-alpha": "yarn publish-all -p alpha -c -t --push && release --pre",
-    "pre-publish-all": "yarn build-docs && yarn update-examples",
+    "publish-all-stable": "npm run publish-all -c -t --push && release && node ./scripts/release-notes.js",
+    "publish-all-canary": "npm run publish-all -p canary -c -t --push && release --pre",
+    "publish-all-alpha": "npm run publish-all -p alpha -c -t --push && release --pre",
+    "pre-publish-all": "npm run build-docs && npm run update-examples",
     "publish-to-npm": "node ./scripts/publish-to-npm.js",
     "build-docs": "node ./scripts/build-docs.js",
     "update-examples": "node ./scripts/update-examples.js",
@@ -77,7 +77,7 @@
   },
   "lint-staged": {
     "*.{js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx}": [
-      "yarn format"
+      "npm run format"
     ]
   },
   "jest": {
