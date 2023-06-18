@@ -247,9 +247,9 @@ module.exports = (
               // https://github.com/facebook/create-react-app/issues/2488
               ascii_only: true,
             },
+            // @todo add flag for sourcemaps
+            sourceMap: razzleOptions.enableSourceMaps,
           },
-          // @todo add flag for sourcemaps
-          sourceMap: razzleOptions.enableSourceMaps,
         };
       }
     }
