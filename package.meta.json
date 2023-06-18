@@ -6,12 +6,12 @@
     "serve": "^11.3.2",
     "mini-css-extract-plugin": "^0.9.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack": "^4.44.1"
+    "webpack": "^5.87.0"
   },
   "internalPeerDependencyVersions": {
     "webpack-dev-server": "^4.0.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "webpack": "^4.0.0 || ^5.0.0"
+    "webpack": "^5.0.0"
   },
   "workspaces": [
     "packages/razzle",
